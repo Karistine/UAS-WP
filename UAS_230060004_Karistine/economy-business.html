@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container-230060004">
+        <h1>ForumCommunity</h1>
+        <div class="search-container-230060004">
+          <form action="action_page.html">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <div class="auth-buttons-230060004">
+          <a href="login.html">
+            <button class="sign-in-230060004">Sign In</button>
+          </a>
+          <a href="register.html">
+            <button class="sign-up-230060004">Sign Up</button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <nav>
+      <a href="account.html" class="account-link-230060004">Account</a>
+      <div class="menu-container-230060004">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="community.html">Community</a>
+          </li>
+          <li>
+            <a href="categories.html">Categories</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <a href="categories.html" class="btn-back">
+        <i class="fa fa-arrow-left"></i> Back </a>
+      <div id="category-section">
+        <div id="choose-category">
+          <label for="categorySelect">Choose Another Category:</label>
+          <select id="categorySelect" class="category-select" onchange="window.location.href=this.value;">
+            <option value="">-- Select a Category --</option>
+            <option value="story.html">Story</option>
+            <option value="news.html">News</option>
+            <option value="games.html">Games</option>
+            <option value="hobby.html">Hobby</option>
+            <option value="health.html">Health</option>
+            <option value="lifestyle.html">Lifestyle</option>
+            <option value="education.html">Education</option>
+            <option value="sports.html">Sports</option>
+            <option value="food-travel.html">Food & Travel</option>
+            <option value="economy-business.html">Economy & Business</option>
+            <option value="entertainment.html">Entertainment</option>
+            <option value="tech.html">Tech</option>
+          </select>
+        </div>
+        <section id="economy-business">
+          <h4>Economy & Business</h4>
+          <br>
+          <div class="category-container">
+            <div class="category-card">
+              <img src="img/economy-business1.jpg" class="card-img-top" alt="Economy & Business Topic 1">
+              <div class="card-body">
+                <h5 class="card-title">Jangan Asal Buka Usaha, Ini Tips Belajar Bisnis untuk Pemula</h5>
+                <p class="card-text">Dive into this topic to explore the latest trends and insights in the economy and business world. Learn about market analysis, economic forecasts, and successful business strategies.</p>
+                <a href="economy-business1.html" class="read-more-button">Read More</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2024 ForumCommunity. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

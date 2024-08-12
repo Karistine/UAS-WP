@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+          font-family: 'Playfair Display', serif;
+      }
+
+      .container-fluid {
+        height: 100%;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: nowrap;
+        /* Prevent wrapping */
+      }
+      .nav-link.active {
+        background-color: #1014ff; /* Highlight background color */
+      }
+
+      #sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        /* Allow scrolling if content overflows */
+        background-color: #1d30ff;
+        /* Sidebar background color */
+      }
+
+      .sidebar-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+      }
+
+      .profile-picture {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media (max-width: 767.98px) {
+        #sidebar {
+          height: auto;
+          /* Allow sidebar height to adjust with content */
+          position: static;
+          /* Make sidebar static on small screens */
+          overflow: visible;
+          /* Allow content to be visible without scrolling */
+          width: 100%;
+          /* Make the sidebar full width */
+        }
+
+        .row {
+          flex-direction: column;
+          /* Stack sidebar and main content vertically */
+        }
+
+        main {
+          padding-left: 0;
+          /* Remove padding to ensure content uses full width */
+          margin-left: 0;
+          /* Remove margin to ensure content uses full width */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" style="color: #fff;">
+                  <i class="fa fa-arrow-left"></i> Back </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="account.html" style="color: #fff;">
+                  <i class="fa fa-user"></i> Profile </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="settings.html" style="color: #fff;">
+                  <i class="fa fa-cog"></i> Settings </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="change-password.html" style="color: #fff;">
+                  <i class="fa fa-lock"></i> Change Password </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html" style="color: #fff;">
+                  <i class="fa fa-sign-out"></i> Log Out </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="container">
+            <h3 class="mt-4">Profile</h3>
+            <div class="d-flex flex-column align-items-center">
+              <img id="profilePicture" src="img/User-Profile-PNG-Image.png" class="img-fluid rounded-circle profile-picture" alt="Profile Picture">
+              <button id="changeProfilePicture" class="btn btn-primary mt-2">Change profile picture</button>
+            </div>
+            <h5 class="mt-4">Personal Information</h5>
+            <div class="list-group">
+              <div class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <strong>Name:</strong>
+                  <span id="profileName">John Doe</span>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <strong>Phone number:</strong>
+                  <span id="profilePhone">081274829472</span>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <strong>Email:</strong>
+                  <span id="profileEmail">johndoe@gmail.com</span>
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="d-flex justify-content-between">
+                  <strong>Address:</strong>
+                  <span id="profileAddress">Jl. Palembang No. 1</span>
+                </div>
+              </div>
+            </div>
+            <button id="editPersonalInfo" class="btn btn-outline-secondary mt-4" style="font-weight: bold;">Edit</button>
+            <br><br>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('changeProfilePicture').addEventListener('click', function() {
+          Swal.fire({
+            title: 'Change Profile Picture',
+            html: `
+									
+									<input type="file" id="profilePictureInput" class="form-control" accept="image/*" required>`,
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#002aff',
+            cancelButtonColor: 'mediumblue',
+            confirmButtonText: 'Upload',
+            preConfirm: () => {
+              const fileInput = document.getElementById('profilePictureInput');
+              if (!fileInput.files.length) {
+                Swal.showValidationMessage('Please select a file');
+                return false;
+              }
+              return fileInput.files[0];
+            }
+          }).then((result) => {
+            if (result.isConfirmed) {
+              const file = result.value;
+              const reader = new FileReader();
+              reader.onload = function(e) {
+                // Update the profile picture with the new image
+                document.getElementById('profilePicture').src = e.target.result;
+                Swal.fire('Uploaded!', 'Your profile picture has been changed.', 'success');
+              }
+              reader.readAsDataURL(file);
+            }
+          });
+        });
+      });
+      document.getElementById('editPersonalInfo').addEventListener('click', function() {
+        Swal.fire({
+          title: 'Edit Personal Information',
+          html: `
+            
+										
+										<form id="editInfoForm">
+											<div class="form-group">
+												<label for="name">Name:</label>
+												<input type="text" id="name" class="form-control" value="${document.getElementById('profileName').innerText}">
+												</div>
+												<div class="form-group">
+													<label for="phone">Phone number:</label>
+													<input type="text" id="phone" class="form-control" value="${document.getElementById('profilePhone').innerText}">
+													</div>
+													<div class="form-group">
+														<label for="email">Email:</label>
+														<input type="email" id="email" class="form-control" value="${document.getElementById('profileEmail').innerText}">
+														</div>
+														<div class="form-group">
+															<label for="address">Address:</label>
+															<input type="text" id="address" class="form-control" value="${document.getElementById('profileAddress').innerText}">
+															</div>
+														</form>
+          `,
+          icon: 'info',
+          showCancelButton: true,
+          confirmButtonColor: '#002aff',
+          cancelButtonColor: 'mediumblue',
+          confirmButtonText: 'Save changes',
+          preConfirm: () => {
+            const form = document.getElementById('editInfoForm');
+            const name = form.querySelector('#name').value;
+            const phone = form.querySelector('#phone').value;
+            const email = form.querySelector('#email').value;
+            const address = form.querySelector('#address').value;
+            if (!name || !phone || !email || !address) {
+              Swal.showValidationMessage('Please fill out all fields');
+              return false;
+            }
+            return {
+              name,
+              phone,
+              email,
+              address
+            };
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            const {
+              name,
+              phone,
+              email,
+              address
+            } = result.value;
+            // Simulasi penyimpanan data atau melakukan aksi lain
+            Swal.fire('Updated!', 'Your personal information has been updated.', 'success');
+            // Update elemen dengan nilai baru
+            document.getElementById('profileName').innerText = name;
+            document.getElementById('profilePhone').innerText = phone;
+            document.getElementById('profileEmail').innerText = email;
+            document.getElementById('profileAddress').innerText = address;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

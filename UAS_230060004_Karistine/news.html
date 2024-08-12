@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container-230060004">
+            <h1>ForumCommunity</h1>
+            <div class="search-container-230060004">
+                <form action="action_page.html">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="auth-buttons-230060004">
+                <a href="login.html"><button class="sign-in-230060004">Sign In</button></a>
+                <a href="register.html"><button class="sign-up-230060004">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="account.html" class="account-link-230060004">Account</a>
+        <div class="menu-container-230060004">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <a href="categories.html" class="btn-back"><i class="fa fa-arrow-left"></i> Back</a>
+        <div id="category-section">
+            <div id="choose-category">
+                <label for="categorySelect">Choose Another Category:</label>
+                <select id="categorySelect" class="category-select" onchange="window.location.href=this.value;">
+                    <option value="">-- Select a Category --</option>
+                    <option value="story.html">Story</option>
+                    <option value="news.html">News</option>
+                    <option value="games.html">Games</option>
+                    <option value="hobby.html">Hobby</option>
+                    <option value="health.html">Health</option>
+                    <option value="lifestyle.html">Lifestyle</option>
+                    <option value="education.html">Education</option>
+                    <option value="sports.html">Sports</option>
+                    <option value="food-travel.html">Food & Travel</option>
+                    <option value="economy-business.html">Economy & Business</option>
+                    <option value="entertainment.html">Entertainment</option>
+                    <option value="tech.html">Tech</option>
+                </select>
+            </div>
+            <section id="news">
+                <h4>Latest News</h4><br>
+                <div class="category-container">
+                    <div class="category-card">
+                        <img src="img/news1.jpeg" class="card-img-top" alt="News 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Airlangga Ikut Santap Malam di IKN, Makan Bakso di Samping Jokowi</h5>
+                            <p class="card-text">
+                                Jakarta - Menteri Koordinator Bidang Perekonomian Airlangga Hartarto tiba di IKN usai 
+                                menyampaikan pengunduran dirinya dari Ketua Umum Golkar. Airlangga tampak menikmati 
+                                bakso di IKN bersama Presiden Jokowi. ...</p>
+                            <a href="news1.html" class="read-more-button">Read More</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="img/news2.jpeg" class="card-img-top" alt="News 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Anies Kaget Jubir PKS Bilang Ada Deadline 40 Hari soal Pilgub Jakarta</h5>
+                            <p class="card-text">Jakarta - Anies Baswedan buka suara soal pernyataan PKS tentang 
+                                batas waktu atau deadline Pilkada Jakarta. Anies mengaku kaget ketika jubir PKS 
+                                bicara batas waktu 40 hari untuk mencari partai pendukung. ...</p>
+                            <a href="news2.html" class="read-more-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; 2024 ForumCommunity. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

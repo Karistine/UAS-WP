@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container-230060004">
+            <h1>ForumCommunity</h1>
+            <div class="search-container-230060004">
+                <form action="action_page.html">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="auth-buttons-230060004">
+                <a href="login.html"><button class="sign-in-230060004">Sign In</button></a>
+                <a href="register.html"><button class="sign-up-230060004">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="account.html" class="account-link-230060004">Account</a>
+        <div class="menu-container-230060004">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="selected-230060004"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <form action="#" method="post" class="form-230060004">
+            <h2>Contact Us</h2>
+            <p>Have any feedback? Feel free to write anything!</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+          
+            <label for="phone">Phone number:<br>Format: 08xx-xxxx-xxxx</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required><br>
+          
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" cols="50" required placeholder="Type your message here..."></textarea><br>
+          
+            <input type="submit" value="Send">
+        </form>
+        <br>
+        <h2>FAQ</h2>
+        <br>
+    
+        <button class="accordion-230060004">Do I have to be good at writing in this online community platform?</button>
+        <div class="panel-230060004">
+            <p>Nope. Don't worry if you aren't good at writing. You can share information by using multimedia.</p>
+        </div>
+    
+        <button class="accordion-230060004">How can I search for my favorite categories?</button>
+        <div class="panel-230060004">
+            <p>You can search through 'Categories' menu and choose your favorite category to join community or share information.</p>
+        </div>
+    
+        <button class="accordion-230060004">Can I join an extrovert community as an introvert?</button>
+        <div class="panel-230060004">
+            <p>Yes, introverts also can join extrovert communities. These online communities can also help introverts develop hidden talents and discover new interests and hobbies. They allow you the opportunity to develop authentic and transparent communication skills.</p>
+        </div>
+        <br><br>
+        <div class="table-container">
+            <table class="responsive-table">
+              <tr>
+                <th colspan="2">Contact Information</th>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>forumcommunity@gmail.com</td>
+              </tr>
+              <tr>
+                <td>Phone Number</td>
+                <td>+1 (555) 123-4567</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>1234 Community Street, Medan City, Indonesia, 20371</td>
+              </tr>
+            </table>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; 2024 ForumCommunity. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script1.js"></script>
+</body>
+</html>

@@ -1,0 +1,1726 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+
+.header-container-230060004 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: darkblue;
+}
+
+.header-container-230060004 h1 {
+    margin: 0;
+}
+
+.search-container-230060004 {
+    justify-content: center;
+    flex-grow: 1;
+    max-width: 600px;
+}
+
+.search-container-230060004 form {
+    display: flex;
+    align-items: center;
+}
+
+.search-container-230060004 input[type="text"] {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    flex-grow: 1;
+    margin-right: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.search-container-230060004 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Same height as width for a square shape */
+    border: none;
+    background-color: rgb(0, 55, 205);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container-230060004 button i {
+    font-size: 16px; /* Default icon size */
+}
+
+.search-container-230060004 button:hover {
+    background-color: #1800b3; /* Darker shade on hover */
+}
+header .auth-buttons-230060004 {
+    display: flex;
+    gap: 10px;
+}
+header .auth-buttons-230060004 a {
+    text-decoration: none;
+}
+.auth-buttons-230060004 .sign-in-230060004,
+.auth-buttons-230060004 .sign-up-230060004 {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid blue;
+    font-weight: bold;
+}
+nav .account-link-230060004 {
+    margin-right: auto;
+    color: black;
+}
+nav .account-link-230060004:hover {
+    color: blue;
+}
+nav .menu-container-230060004 {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav ul li a:hover,
+nav ul li.selected-230060004 a {
+    background-color: mediumblue;
+    color: #fff;
+    border-radius: 4px;
+}
+
+button.sign-in-230060004 {
+    color: #fff;
+    background-color: darkblue;
+    border-color: darkblue;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button.sign-in-230060004:hover {
+    color: #fff;
+    background-color: navy;
+    border-color: navy;
+    font-weight: bold;
+}
+button.sign-in-230060004:focus {
+    color: #fff;
+    background-color: #0007d9;
+    border-color: #0700cc;
+    box-shadow: 0 0 0 0.2rem rgba(42, 38, 255, 0.5);
+}
+button.sign-in-230060004:disabled {
+    color: #fff;
+    background-color: rgb(0, 0, 184);
+    border-color: rgb(0, 0, 185);
+}
+
+button.sign-up-230060004 {
+    color: mediumblue;
+    background-color: #fff;
+    border-color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button.sign-up-230060004:hover {
+    color: mediumblue;
+    background-color: #fff;
+    border-color: #fff;
+    font-weight: bold;
+}
+button.sign-up-230060004:focus {
+    color: darkblue;
+    background-color: #f1f1f1;
+    border-color: #f2f2f2;
+    box-shadow: 0 0 0 0.2rem rgba(30, 0, 255, 0.5);
+}
+button.sign-up-230060004:disabled {
+    color: #1b1c7d;
+    background-color: #fff;
+    border-color: #271487;
+}
+
+.account-230060004 {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.account-profile-picture-230060004 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.table-container {
+    display: flex; /* Menggunakan Flexbox untuk penyelarasan */
+    justify-content: center; /* Menyelaraskan tabel secara horizontal di tengah */
+    padding: 1rem; /* Jarak tambahan di sekitar tabel */
+  }
+  
+  .responsive-table {
+    width: 100%; /* Memastikan tabel menggunakan lebar penuh kontainer */
+    max-width: 800px; /* Lebar maksimum tabel, sesuaikan sesuai kebutuhan */
+    border-collapse: collapse; /* Menghapus jarak antara border tabel */
+    overflow-x: auto; /* Membuat tabel scrollable secara horizontal jika terlalu lebar */
+  }
+  
+  .responsive-table th,
+  .responsive-table td {
+    padding: 0.75rem; /* Padding di sekitar teks tabel */
+    border: 1px solid #0008ff; /* Border ringan di sekitar sel tabel */
+    text-align: left; /* Penyelarasan teks ke kiri */
+  }
+  
+  .responsive-table th {
+    background-color: #0008ff; /* Warna latar belakang untuk header tabel */
+    font-weight: bold; /* Menebalkan teks header tabel */
+    color: #fff;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .responsive-table {
+      font-size: 0.875rem; /* Mengurangi ukuran font pada layar kecil */
+    }
+  }
+
+td {
+    padding: 5px;
+}
+
+main {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: #ffffff;
+    color: black;
+    padding: 20px;
+}
+
+.slideshow-container-230060004 {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides-230060004 {
+    display: none;
+}
+
+.mySlides-230060004 img {
+    width: 100%;
+}
+
+.text-230060004 {
+    color: #f2f2f2;
+    background-color: #000000b9;
+    padding: 10px; /* Padding di sekitar teks */
+    font-size: 1rem; /* Ukuran font */
+    line-height: 1.4; /* Jarak antar baris */
+    word-wrap: break-word; /* Memastikan teks tidak meluap dari area */
+    position: absolute;
+    bottom: 10px; /* Jarak dari bawah */
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .text-230060004 {
+      font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+      padding: 8px; /* Padding yang disesuaikan pada layar kecil */
+      bottom: 5px; /* Jarak dari bawah yang disesuaikan */
+    }
+  }
+
+.prev-230060004,
+.next-230060004 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: #020081;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.prev-230060004 {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.next-230060004 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-230060004:hover,
+.next-230060004:hover {
+    background-color: #0400ff;
+}
+
+.dot-230060004 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #1c00a7;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot-230060004:hover {
+    background-color: #1139ff;
+}
+
+/* Fading animation */
+main div div.mySlides-230060004 div.fade-230060004 {
+  animation-name: fade-230060004;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade-230060004 {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+.form-230060004 {
+    max-width: 500px;
+    margin: 2rem auto; /* Margin otomatis di sekitar formulir */
+    padding: 1.5rem; /* Padding di sekitar formulir */
+    background-color: rgba(255, 255, 255);
+    border-color: mediumblue;
+    border-style: outset;
+    border-width: 3px;
+}
+.form-230060004 h2 {
+    font-size: 1.5rem; /* Ukuran font untuk judul */
+    margin-bottom: 1rem; /* Jarak bawah untuk judul */
+    color: #333; /* Warna teks judul */
+  }
+  
+  .form-230060004 p {
+    font-size: 1rem; /* Ukuran font untuk paragraf */
+    line-height: 1.6; /* Jarak antar baris untuk keterbacaan */
+    margin-bottom: 1.5rem; /* Jarak bawah untuk paragraf */
+    color: #222; /* Warna teks paragraf */
+  }
+  
+  .form-230060004 label {
+    display: block; /* Menampilkan label sebagai blok */
+    font-size: 1rem; /* Ukuran font untuk label */
+    margin-bottom: 0.5rem; /* Jarak bawah untuk label */
+    color: #222; /* Warna teks label */
+  }
+  
+  .form-230060004 input[type="text"],
+.form-230060004 input[type="email"],
+.form-230060004 input[type="tel"],
+.form-230060004 textarea {
+  width: 100%; /* Lebar penuh elemen input dan textarea */
+  padding: 0.75rem; /* Padding di sekitar teks */
+  border: 1px solid #ccc; /* Border ringan untuk input */
+  border-radius: 4px; /* Sudut melengkung pada input */
+  margin-bottom: 1rem; /* Jarak bawah untuk elemen input */
+  box-sizing: border-box; /* Memastikan padding dihitung dalam lebar total */
+  font-size: 1rem; /* Ukuran font di dalam input */
+  line-height: 1.5; /* Jarak antar baris untuk keterbacaan */
+  color: #333; /* Warna teks di dalam input */
+  background-color: #fff; /* Warna latar belakang input */
+  font-family: 'Playfair Display', serif;
+}
+
+.form-230060004 input[type="text"]:focus,
+.form-230060004 input[type="email"]:focus,
+.form-230060004 input[type="tel"]:focus,
+.form-230060004 textarea:focus {
+  border-color: #0800ff; /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
+  box-shadow: 0 0 0 2px rgba(0, 17, 255, 0.25); /* Bayangan saat fokus */
+}
+
+.form-230060004 input[type="submit"] {
+    width: auto;
+    align-self: center;
+    cursor: pointer;
+}
+.accordion-230060004 {
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+.accordion-230060004:hover {
+    background-color: rgb(0, 0, 127);
+}
+
+.panel-230060004 {
+    padding: 0 10px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+
+.panel-230060004 p {
+    margin: 10px 0;
+}
+@media (max-width: 768px) {
+    .form-230060004 {
+      padding: 1rem; /* Padding formulir yang disesuaikan pada layar kecil */
+    }
+    .form-230060004 p {
+        font-size: 0.875rem; /* Ukuran font yang lebih kecil pada layar kecil */
+      }
+    
+      .form-230060004 label {
+        font-size: 0.875rem; /* Ukuran font yang lebih kecil pada layar kecil */
+      }
+      .form-230060004 input[type="text"],
+  .form-230060004 input[type="email"],
+  .form-230060004 input[type="tel"],
+  .form-230060004 textarea {
+    font-size: 0.875rem; /* Ukuran font yang lebih kecil pada layar kecil */
+    padding: 0.5rem; /* Padding yang disesuaikan pada layar kecil */
+  }
+  
+    .form-230060004 input[type="submit"] {
+      padding: 0.5rem 1rem; /* Padding tombol yang disesuaikan pada layar kecil */
+      font-size: 0.875rem; /* Ukuran font tombol lebih kecil pada layar kecil */
+    }
+  }
+
+.accordion-230060004:after {
+    content: '\002B';
+    font-size: 13px;
+    color: #fff;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion-230060004.active:after {
+    content: "\2212";
+    font-weight: bolder;
+}
+
+.accordion-230060004.active + .panel-230060004 {
+    display: block;
+}
+@media (max-width: 600px) {
+    .accordion-230060004 {
+        padding: 15px;
+        font-size: 0.875em;
+    }
+
+    .accordion-230060004:after {
+        font-size: 18px;
+    }
+
+    .panel-230060004 p {
+        font-size: 0.875em;
+    }
+}
+  #post-230060004 {
+    margin: 20px;
+    text-align: center; /* Center the text and button */
+}
+
+#post-230060004 p {
+    font-size: 1rem; /* Ukuran font default */
+    line-height: 1.6; /* Jarak antar baris untuk keterbacaan */
+    margin: 0 0 1rem 0; /* Jarak bawah untuk pemisahan antar elemen */
+}
+
+.create-post-230060004 {
+    padding: 0.5rem 1rem; /* Padding di sekitar teks tombol */
+    font-size: 1rem; /* Ukuran font tombol */
+    background-color: mediumblue;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem; /* Sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Transisi halus untuk perubahan warna */
+}
+.create-post-230060004 {
+    background-color: rgb(0, 21, 255);
+}
+@media (max-width: 768px) {
+    #post-230060004 p {
+      font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+  
+    .create-post-230060004 {
+      font-size: 0.875rem; /* Ukuran font tombol lebih kecil pada layar kecil */
+      padding: 0.5rem; /* Padding tombol yang disesuaikan */
+    }
+  }
+
+#about-230060004 {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 20px;
+}
+
+#about-230060004 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#about-230060004 li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    #about-230060004 {
+        font-size: 14px;
+    }
+
+    #about-230060004 li {
+        margin-bottom: 8px;
+    }
+}
+#create-community-230060004 p, p#join-community-230060004 {
+    font-size: 1rem; /* Ukuran font default */
+    line-height: 1.6; /* Jarak antar baris untuk keterbacaan */
+    color: #333; /* Warna teks yang kontras */
+    margin: 0 0 1rem 0; /* Jarak bawah untuk pemisahan antar elemen */
+  }
+  .create-community-230060004 {
+      padding: 0.75rem 1.5rem; /* Padding di sekitar teks tombol */
+      font-size: 1rem; /* Ukuran font tombol */
+      background-color: #0400ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+  }
+  @media (max-width: 768px) {
+    #create-community-230060004 p, p#join-community-230060004 {
+      font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+  
+    .create-community-230060004 {
+      font-size: 0.875rem; /* Ukuran font tombol lebih kecil pada layar kecil */
+      padding: 0.5rem 1rem; /* Padding tombol yang disesuaikan */
+    }
+  }
+
+
+        .join-community-230060004 .column-230060004 button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 0.75rem 1.5rem; /* Padding di sekitar teks tombol */
+            font-size: 1rem; /* Ukuran font tombol */
+            background-color: #0400ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+        }
+        a, .column-230060004 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .create-community-230060004:hover,
+        .join-community-230060004 .column-230060004 button:hover {
+            background-color: #000dff;
+            text-decoration: none;
+        }
+        .join-community-230060004 .column-230060004 button:focus {
+            background-color: #00089b;
+            text-decoration: none;
+        }
+        .community-profile-230060004 {
+            font-size: 1rem; /* Ukuran font default */
+            line-height: 1.4; /* Jarak antar baris untuk keterbacaan */
+            margin: 0.5rem 0; /* Jarak atas dan bawah */
+          }          
+
+        .community-profile-230060004 a {
+            text-decoration: none;
+            color: black;
+        }
+        .community-profile-230060004 a:hover {
+            text-decoration: underline;
+        }
+
+        .community-profile-picture-230060004 {
+            width: 100px;
+            height: auto; /* Menjaga rasio aspek gambar */
+            border-radius: 50%; /* Sudut melengkung pada gambar */
+            object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+        }
+
+        .join-community-230060004 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem; /* Jarak antar kolom */
+            justify-content: center; /* Memusatkan kolom secara horizontal */
+            padding: 1rem; /* Padding di sekitar container */
+          }
+
+        .join-community-230060004 .column-230060004 {
+            flex: 1 1 calc(20% - 1rem); /* Lebar kolom dengan jarak antar kolom */
+            max-width: 300px; /* Lebar maksimal kolom */
+            border: 1px solid #ddd; /* Border ringan di sekitar kolom */
+            border-radius: 8px; /* Sudut melengkung pada kolom */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+            background-color: #fff; /* Latar belakang putih untuk kolom */
+            text-align: center;
+            padding: 1rem; /* Padding di sekitar konten dalam kolom */
+        }
+
+        @media (max-width: 768px) {
+            .column-230060004 {
+              flex: 1 1 calc(50% - 1rem); /* Lebar kolom yang disesuaikan pada layar kecil */
+            }
+          
+            .community-profile-230060004 {
+              font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+            }
+          
+            .join-community-230060004 {
+              font-size: 0.875rem; /* Ukuran font tombol lebih kecil pada layar kecil */
+              padding: 0.5rem; /* Padding tombol yang disesuaikan */
+            }
+          }
+
+footer {
+    background-color: darkblue;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+footer p {
+    font-size: 1rem; /* Ukuran font */
+    line-height: 1.4; /* Jarak antar baris untuk keterbacaan */
+    margin: 0;
+}
+@media (max-width: 576px) {
+    footer {
+        padding: 10px;
+    }
+    footer p {
+        font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+        padding: 0.5rem 0; /* Padding yang disesuaikan pada layar kecil */
+      }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-container-230060004 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-container-230060004 {
+        margin-bottom: 10px; /* Add margin-bottom to separate from auth buttons */
+    }
+
+            .search-container-230060004 button {
+                width: 35px; /* Smaller width for tablets and mobile devices */
+                height: 35px; /* Maintain square shape */
+            }
+        
+            .search-container-230060004 button i {
+                font-size: 14px; /* Adjust icon size for smaller screens */
+            }
+        
+            .search-container-230060004 input[type="text"] {
+                padding: 8px;
+                margin-right: 4px;
+            }
+
+    header .auth-buttons {
+        margin-top: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav .account-link-230060004 {
+        margin: 10px 0;
+        order: 1;
+    }
+    nav .menu-container-230060004 {
+        margin: 10px 0;
+        order: 2;
+    }
+
+    nav .menu-container-230060004 ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .menu-container-230060004 ul li {
+        margin: 5px 0;
+    }
+}
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .search-container-230060004 button {
+        width: 30px; /* Even smaller width for very small screens */
+        height: 30px; /* Maintain square shape */
+    }
+
+    .search-container-230060004 button i {
+        font-size: 12px; /* Adjust icon size further */
+    }
+
+    .search-container-230060004 input[type="text"] {
+        padding: 6px;
+        margin-right: 3px;
+    }
+
+    nav ul li a {
+        padding: 6px;
+    }
+    .auth-buttons-230060004 {
+        margin-top: 10px; /* Adjust as needed for smaller screens */
+    }
+
+    .prev-230060004, .next-230060004 {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+form label {
+    text-align: left;
+    display: block;
+    margin-top: 1em;
+    padding: 5px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+form input[type="submit"] {
+    width: auto;
+    background: mediumblue;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background: rgb(0, 0, 171);
+}
+
+#container-230060004 {
+    max-width: 500px;
+    margin-inline: auto;
+    margin-block: 20px;
+    padding: 16px;
+    background-color: rgba(255, 255, 255);
+    border: thick solid blue;
+}
+
+img.login-avatar-230060004 {
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#container-230060004 input[type=text], #container-230060004 input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Facebook and Google Buttons */
+.btn-230060004 {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.btn-230060004:hover {
+    opacity: 1;
+}
+
+#fb-btn-230060004 {
+    background-color: #3B5998;
+    color: white;
+}
+
+#google-btn-230060004 {
+    background-color: #dd4b39;
+    color: white;
+}
+
+.hr-text-230060004 {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+    &:before {
+      content: '';
+      background: linear-gradient(to right, transparent, #525252, transparent);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+    }
+    &:after {
+      content: attr(data-content);
+      position: relative;
+      display: inline-block;
+      color: black;
+      padding: 0 .5em;
+      line-height: 1.5em;
+      color: #525252;
+      background-color: #fcfcfa;
+    }
+}
+
+.container a {
+    color: dodgerblue;
+}
+
+span.psw {
+    float: right;
+    padding-top: 12px;
+    padding-bottom: 12px
+}
+
+.title {
+    text-align: center;
+}
+
+.container .input[type="checkbox"] {
+    display: inline;
+    float: left;
+    margin: 5px;
+    width: 20px;
+    align-items: center;
+    vertical-align: center;
+    margin-right: 10px;
+}
+.signin-230060004 {
+    background-color: #dcdcdcd3;
+    margin: 16px;
+    text-align: center;
+}
+#cancelbtn-230060004 {
+    color: white;
+    background-color:navy;
+}
+#loginbtn-230060004 {
+    background-color: mediumblue;
+    color: white;
+}
+#registerbtn-230060004 {
+    float: right;
+    color: #fff;
+    background-color: mediumblue;
+}
+#passwordbtn-230060004 {
+    width: 100%;
+    color: #fff;
+    background-color: blue;
+}
+div.joincommunity-230060004 {
+    column-count: 2;
+    column-gap: normal;
+    column-rule: 2px solid #444;
+}
+img.community-profile-picture-230060004 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#categories-230060004 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.column-categories-230060004 {
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.btncategories-230060004 {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #fff;
+    color: #0400ff;
+    border: 1px solid blue;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.btncategories-230060004:hover {
+    background-color: rgba(0, 21, 255, 0.299);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .column-categories-230060004 {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .column-categories-230060004 {
+        flex: 1 1 100%;
+    }
+
+    .btncategories-230060004 {
+        font-size: 1em; /* Ukuran font tetap proporsional */
+        padding: 12px; /* Padding sedikit dikurangi untuk konsistensi */
+        min-width: 120px; /* Batas minimal lebar tombol */
+        min-height: 50px; /* Batas minimal tinggi tombol */
+    }
+}
+.arrow-230060004 {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.left-230060004 {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.arrow-230060004:hover {
+    border-color: blue;
+}
+
+.card-230060004 img {
+    width: 100%; /* Mengatur gambar agar memenuhi lebar kartu */
+    height: auto; /* Menjaga proporsi gambar */
+    display: block;
+}
+/* Kontainer kartu */
+.search-card-container-230060004 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Memusatkan kartu di tengah secara horizontal */
+    gap: 15px; /* Jarak antara kartu */
+}
+
+/* Kartu */
+.search-card-230060004 {
+    width: 300px; /* Lebar kartu */
+    margin: 10px; /* Jarak antara kartu */
+    border-radius: 4px;
+    border: thin solid rgba(0, 42, 255, 0.772);
+}
+
+/* Responsif: Lebar kartu lebih kecil pada layar menengah */
+@media (max-width: 768px) {
+    .search-card-230060004 {
+        width: 250px; /* Lebar kartu yang lebih kecil pada layar lebih kecil */
+    }
+}
+
+/* Responsif: Lebar kartu penuh pada layar kecil */
+@media (max-width: 480px) {
+    .search-card-230060004 {
+        width: 100%; /* Lebar penuh pada layar sangat kecil */
+    }
+}
+
+
+.card-container-230060004 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Memusatkan kartu di tengah secara horizontal */
+    gap: 15px;
+}
+
+.card-230060004 {
+    margin: 10px; /* Menambahkan jarak antara kartu */
+    width: 300px; /* Lebar kartu yang diinginkan */
+    border: 1px solid #ddd; /* Border kartu */
+    border-radius: 8px; /* Sudut melengkung border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow */
+    overflow: hidden; /* Untuk memastikan gambar tidak melebihi border */
+    transition: box-shadow 0.3s ease; /* Transisi halus untuk efek hover */
+}
+.card-230060004:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Box shadow lebih gelap saat hover */
+}
+
+@media (max-width: 768px) {
+    .card-230060004 {
+        width: 200px; /* Lebar kartu lebih kecil pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-230060004 {
+        width: 100%; /* Kartu penuh lebar pada layar sangat kecil */
+    }
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+}
+
+.search-card-body {
+    padding: 1rem;
+}
+
+.search-card-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.search-card-text {
+    margin: 0 0 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .search-card-title {
+        font-size: 1.125rem; /* Slightly smaller font size for screens less than 768px */
+    }
+
+    .search-card-text {
+        font-size: 0.875rem; /* Slightly smaller font size for screens less than 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .search-card-title {
+        font-size: 1rem; /* Maintain a readable font size for screens less than 480px */
+    }
+
+    .search-card-text {
+        font-size: 0.875rem; /* Maintain a readable font size for screens less than 480px */
+    }
+}
+
+.card-230060004 a {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+.card-230060004 a:hover {
+    text-decoration: underline;
+}
+
+.card a:hover {
+    background-color: #0003b3;
+}
+
+.btn-forum-community {
+    background-color: #001aff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-forum-community:hover {
+    background-color: #0000b3;
+}
+
+.card-230060004 .post-container-230060004 {
+    padding: 15px; /* Padding di dalam kartu */
+}
+  
+@media (max-width: 768px) {
+    .card-container-230060004 {
+        gap: 0.5rem;
+    }
+
+    .card-230060004 {
+        max-width: 250px; /* Lebar maksimum kartu pada layar kecil */
+    }
+    .card-230060004 a {
+        font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+        padding: 0.5rem;
+    }
+}
+@media (max-width: 480px) {
+    .card-230060004 {
+        max-width: 200px; /* Lebar maksimum kartu pada layar ekstra kecil */
+    }
+}
+
+h4 {
+    font-size: 2.5rem; /* Ukuran font yang lebih besar */
+    font-weight: bold; /* Menebalkan teks */
+    color: #333; /* Warna teks */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin-bottom: 30px; /* Jarak bawah */
+}
+
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Jarak antar kartu */
+    justify-content: center; /* Menyelaraskan kartu ke tengah */
+}
+
+.category-card {
+    width: 300px; /* Lebar tetap untuk kartu berita */
+    border: 1px solid #ddd; /* Garis batas kartu */
+    border-radius: 8px; /* Sudut melengkung */
+    overflow: hidden; /* Memotong bagian yang melampaui batas */
+    background-color: #fff; /* Warna latar belakang */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+    transition: box-shadow 0.3s ease; /* Transisi bayangan */
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar saat hover */
+}
+
+.category-card img {
+    width: 100%; /* Lebar gambar mengikuti lebar kartu */
+    height: auto; /* Tinggi gambar otomatis */
+}
+
+.card-body {
+    padding: 20px; /* Jarak di dalam kartu */
+}
+
+h2, h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem; /* Ukuran font default */
+    line-height: 1.2; /* Jarak antar baris */
+}
+.card-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem; /* Default font size for larger screens */
+    line-height: 1.2; /* Jarak antar baris */
+}
+
+/* Gaya untuk deskripsi */
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Media queries untuk ukuran layar kecil */
+@media (max-width: 768px) {
+    h2, h4 {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk layar kecil */
+    }
+
+    .card-title {
+        font-size: 1.125rem; /* Smaller font size for screens less than 768px */
+    }
+
+    .card-text {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk deskripsi */
+    }
+}
+
+@media (max-width: 480px) {
+    h2, h4 {
+        font-size: 1.25rem; /* Ukuran font lebih kecil untuk layar ekstra kecil */
+    }
+
+    .card-title {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk layar ekstra kecil */
+    }
+
+    .card-text {
+        font-size: 0.875rem; /* Ukuran font lebih kecil untuk deskripsi */
+    }
+}
+
+.read-more-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0004ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+.read-more-button:hover {
+    background-color: #1b00b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .category-card {
+        flex: 1 1 calc(50% - 20px); /* Menyediakan dua kolom */
+    }
+}
+
+@media (max-width: 768px) {
+    .category-card {
+        flex: 1 1 100%; /* Menyediakan satu kolom */
+    }
+}
+
+.btn-back {
+    background-color: transparent;
+    border: 2px solid #0d00ff;
+    color: #0d00ff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-back:hover {
+    background-color: #0000c0;
+    border-color: #0000c0;
+    color: #fff;
+}
+
+#category-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menyelaraskan konten di tengah horizontal */
+    padding: 20px;
+}
+
+/* Dropdown Styles */
+#choose-category {
+    margin-bottom: 20px; /* Jarak antara dropdown dan kartu */
+    font-weight: bold;
+}
+
+.category-select {
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    max-width: 300px; /* Lebar maksimum dropdown */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px; /* Jarak atas antara label dan dropdown */
+}
+
+.category-select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.category-select option {
+    padding: 10px; /* Jarak di dalam opsi dropdown */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .category-select {
+        max-width: 250px; /* Lebar maksimum dropdown di layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .btn-back {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+
+    #choose-category {
+        margin-top: 10px;
+    }
+
+    #choose-category select {
+        width: 100%;
+    }
+
+    .category-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-back {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+
+    #choose-category select {
+        padding: 5px;
+    }
+
+    .read-more-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+.search-result-container {
+    display: flex;
+    align-items: center; /* Vertikal alignment */
+    justify-content: center; /* Horizontal center for heading */
+    position: relative; /* Untuk penataan tombol back */
+    margin-bottom: 20px; /* Jarak dari elemen di bawahnya */
+}
+@media (max-width: 768px) {
+    .btn-forum-community {
+        font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+        padding: 8px 15px; /* Padding lebih kecil pada layar kecil */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-forum-community {
+        font-size: 0.75rem; /* Ukuran font lebih kecil pada layar ekstra kecil */
+        padding: 6px 12px; /* Padding lebih kecil pada layar ekstra kecil */
+    }
+}
+.category-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.category-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.category-content h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.category-content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.category-content p strong, .category-content p em {
+    text-align: left;
+    font-weight: normal;
+}
+.category-content p.justify {
+    text-align: justify;
+    margin: 1rem 0;
+}
+.category-content li {
+    text-align: justify;
+    font-size: 1em; /* Ukuran font default */
+    line-height: 1.5; /* Jarak antar baris untuk keterbacaan */
+    padding: 0.5rem 0; /* Jarak atas dan bawah untuk setiap item */
+    margin-bottom: 0.5rem; /* Jarak bawah antar item */
+}
+@media (max-width: 768px) {
+    .category-content li {
+      font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+      padding: 0.5rem 0; /* Menjaga jarak yang nyaman pada layar kecil */
+    }
+  }
+@media (max-width: 768px) {
+    .category-content h4 {
+      font-size: 1.25rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+  
+    .category-content p {
+      font-size: 0.875rem; /* Ukuran font lebih kecil pada layar kecil */
+    }
+  }
+.comment-section {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+.comment-section h3 {
+    margin-bottom: 20px;
+}
+.comments-list h3 {
+    margin-bottom: 10px;
+}
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-family: 'Playfair Display', serif;
+}
+.comment-form button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #0400ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.comment-form button:hover {
+    background-color: #0300b3;
+}
+/* CSS untuk tata letak komentar */
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+}
+
+.profile-img {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.comment-text {
+    flex: 1;
+    text-align: justify;
+}
+
+.author {
+    font-weight: bold;
+    margin: 0;
+}
+
+.comment-text p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.comment .justify {
+    text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .comment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .profile-img {
+        margin-bottom: 10px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .category-content {
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-content h4 {
+        font-size: 1.2em;
+    }
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 1rem 0; /* Jarak atas dan bawah untuk video */
+    box-sizing: border-box; /* Memastikan border dihitung dalam lebar elemen */
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Menghilangkan border default dari iframe */
+  }
+
+  .profile-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Menyelaraskan elemen di tengah */
+    gap: 20px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column; /* Mengubah arah kolom untuk responsif */
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    max-width: 600px; /* Membatasi lebar untuk keterbacaan */
+}
+
+.profile-info h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0;
+}
+
+.profile-info p, .profile-details p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.profile-details, .profile-forum {
+    margin-top: 20px;
+    text-align: center; /* Menempatkan teks di tengah */
+}
+
+.profile-details h4 {
+    font-size: 1.2em;
+    color: #222;
+    border-bottom: 2px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-forum h4 {
+    font-size: 1.2em;
+    color: #222;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.profile-forum .see-here-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    background-color: #0004ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.profile-forum .see-here-button:hover {
+    background-color: #1b00b3;
+}
+
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-info h3 {
+        font-size: 1.2em;
+    }
+
+    .profile-info p, .profile-details p {
+        font-size: 0.9em;
+    }
+
+    .profile-details h4, .profile-forum h4 {
+        font-size: 1em;
+    }
+
+    .profile-forum .see-here-button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h3 {
+        font-size: 1em;
+    }
+
+    .profile-info p, .profile-details p {
+        font-size: 0.8em;
+    }
+
+    .profile-details h4, .profile-forum h4 {
+        font-size: 0.9em;
+    }
+
+    .profile-forum .see-here-button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
