@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        @media (max-width: 480px) {
+            .btn-back {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container-230060004">
+            <h1>ForumCommunity</h1>
+            <div class="search-container-230060004">
+                <a href="action_page.html">
+                    <input type="text" placeholder="Search..">
+                    <button><i class="fa fa-search"></i></button>
+                </a>
+            </div>
+            <div class="auth-buttons-230060004">
+                <a href="login.html"><button class="sign-in-230060004">Sign In</button></a>
+                <a href="register.html"><button class="sign-up-230060004">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="account.html" class="account-link-230060004">Account</a>
+        <div class="menu-container-230060004">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="food-travel-video">
+            <div class="category-content">
+                <h4>Bali Travel Food Review Kintamani Bali Indonesia Today 2024</h4>
+                <p><strong>Bali by Gary</strong></p>
+                <p><em>Wednesday, 7 Aug 2024 20:30 WIB</em></p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/vhuRzzF8l-8" allowfullscreen></iframe>
+                </div>
+                <p class="justify">
+                    In today's Bali food review video vlog, I will have lunch at the Grand Puncak Sari located in Kintamani, Bali, Indonesia. <br><br>
+                    VIDEO CONTENT: Bali food review grand pucak sari kintamani, Bali <br><br>
+                </p>
+                <a href="javascript:history.back()" class="btn-back"><i class="fa fa-arrow-left"></i> Back</a>
+            </div>
+        </section>
+        <section class="comment-section">
+            <h3>Comments</h3>
+            <div class="comment-form">
+                <form action="#" method="post">
+                    <textarea name="comment" placeholder="Add a comment..." required></textarea><br>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+            <br>
+            <div class="comments-list">
+                <h3>Comments List</h3>
+                <div class="comment" id="no-comments" style="justify-content: center;">
+                    <p>No comments yet. Be the first to post a comment!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; 2024 ForumCommunity. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container-230060004">
+            <h1>ForumCommunity</h1>
+            <div class="search-container-230060004">
+                <a href="action_page.html">
+                    <input type="text" placeholder="Search..">
+                    <button><i class="fa fa-search"></i></button>
+                </a>
+            </div>
+            <div class="auth-buttons-230060004">
+                <a href="login.html"><button class="sign-in-230060004">Sign In</button></a>
+                <a href="register.html"><button class="sign-up-230060004">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="account.html" class="account-link-230060004">Account</a>
+        <div class="menu-container-230060004">
+            <ul>
+                <li class="selected-230060004"><a href="index.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="slideshow-container-230060004">
+
+            <div class="mySlides-230060004 fade-230060004">
+                <a href="education1.html"><img src="img/program-beasiswa-pemerintah.jpg" style="width:100%">
+                <div class="text-230060004">5 Beasiswa di Tahun 2024 dari Pemerintah Indonesia, Apa Saja?</div></a>
+            </div>
+            
+            <div class="mySlides-230060004 fade-230060004">
+                <a href="sports1.html"><img src="img/sports1.jpg" style="width:100%">
+                <div class="text-230060004">5 Rekomendasi Jenis Olahraga untuk Pemula yang Murah Meriah</div></a>
+            </div>
+            
+            <div class="mySlides-230060004 fade-230060004">
+                <a href="economy-business1.html"><img src="img/bisnis-pemula.jpeg" style="width:100%">
+                <div class="text-230060004">Tips Bisnis Untuk Pemula</div></a>
+            </div>
+            
+            <a class="prev-230060004" onclick="plusSlides(-1)">❮</a>
+            <a class="next-230060004" onclick="plusSlides(1)">❯</a>
+            
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot-230060004" onclick="currentSlide(1)"></span> 
+            <span class="dot-230060004" onclick="currentSlide(2)"></span> 
+            <span class="dot-230060004" onclick="currentSlide(3)"></span> 
+        </div>
+        <div id="post-230060004">
+            <p>
+                <label>Create a post here.</label><br><br>
+                <a href="create-post.html"><button class="create-post-230060004">Create Post</button></a>
+            </p>
+            <p>View posts below</p>
+            <div class="card-container-230060004">
+                <div class="card-230060004">
+                    <img src="img/E-Sports.jpg" alt="Avatar">
+                    <div class="post-container-230060004">
+                        <a href="games1.html">E-Sports MLBB Untuk Mahasiswa & Mahasiswi Internasional</a>
+                    </div>
+                </div>
+                <div class="card-230060004">
+                    <img src="img/story1.jpg" alt="Story">
+                    <div class="post-container-230060004">
+                        <a href="story1.html">Manfaat Cerita Horror</a>
+                    </div>
+                </div>
+                <div class="card-230060004">
+                    <img src="img/news1.jpeg" alt="News">
+                    <div class="post-container-230060004">
+                        <a href="news1.html">Airlangga Ikut Santap Malam di IKN, Makan Bakso di Samping Jokowi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; 2024 ForumCommunity. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

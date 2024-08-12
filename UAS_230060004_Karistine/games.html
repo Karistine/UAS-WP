@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container-230060004">
+            <h1>ForumCommunity</h1>
+            <div class="search-container-230060004">
+                <a href="action_page.html">
+                    <input type="text" placeholder="Search..">
+                    <button><i class="fa fa-search"></i></button>
+                </a>
+            </div>
+            <div class="auth-buttons-230060004">
+                <a href="login.html"><button class="sign-in-230060004">Sign In</button></a>
+                <a href="register.html"><button class="sign-up-230060004">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="account.html" class="account-link-230060004">Account</a>
+        <div class="menu-container-230060004">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <a href="categories.html" class="btn-back"><i class="fa fa-arrow-left"></i> Back</a>
+        <div id="category-section">
+            <div id="choose-category">
+                <label for="categorySelect">Choose Another Category:</label>
+                <select id="categorySelect" class="category-select" onchange="window.location.href=this.value;">
+                    <option value="">-- Select a Category --</option>
+                    <option value="story.html">Story</option>
+                    <option value="news.html">News</option>
+                    <option value="games.html">Games</option>
+                    <option value="hobby.html">Hobby</option>
+                    <option value="health.html">Health</option>
+                    <option value="lifestyle.html">Lifestyle</option>
+                    <option value="education.html">Education</option>
+                    <option value="sports.html">Sports</option>
+                    <option value="food-travel.html">Food & Travel</option>
+                    <option value="economy-business.html">Economy & Business</option>
+                    <option value="entertainment.html">Entertainment</option>
+                    <option value="tech.html">Tech</option>
+                </select>
+            </div>
+            <section id="games">
+                <h4>Games</h4><br>
+                <div class="category-container">
+                    <div class="category-card">
+                        <img src="img/E-Sports.jpg" class="card-img-top" alt="Game 1">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Sports MLBB Untuk Mahasiswa & Mahasiswi Internasional</h5>
+                            <p class="card-text">Kompetisi E-Sports untuk mahasiswa dan mahasiswi internaional.</p>
+                            <a href="games1.html" class="read-more-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; 2024 ForumCommunity. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
