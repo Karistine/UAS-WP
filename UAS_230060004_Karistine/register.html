@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      body {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+</head>
+<body>
+    
+    <form action="#" method="post">
+      <div class="container" id="container-230060004" style="max-width: 500px;">
+        <div class="title">
+        <h2 style="font-weight: bold;">Sign Up</h2>
+        <p>Please fill in this form to create an account.</p>
+        </div>
+        <hr>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+          
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+          
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        
+        <label for="remember" style="display: inline-block;">
+          <input class="input" type="checkbox" checked="checked" name="remember">
+          Remember me
+        </label><br><br>
+
+        <p>By creating an account you agree to our <a href="terms-privacy.html">Terms & Privacy</a>.</p>
+
+        <div class="row" style="padding: 15px;">
+          <div class="col-6">
+            <a href="index.html"><button type="button" class="btn btn-230060004" id="cancelbtn-230060004">Cancel</button></a>
+          </div>
+          <div class="col-6">
+            <a href="login.html"><button type="submit" class="btn btn-230060004" id="registerbtn-230060004">Sign Up</button></a>
+          </div>
+        </div>
+        
+
+        <p class="container signin-230060004" id="container-230060004" style="background-color: #dcdcdcd3; margin-inline: auto; border: none;">
+            Already have an account? <a href="login.html">Sign in</a>.
+        </p>
+    </div>
+  </form>
+  <script src="js/jquery-3.6.0.min.js"></script>
+</body>
+</html>

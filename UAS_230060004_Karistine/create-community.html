@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4" style="max-width: 500px; border: 2px solid blue; padding: 16px;">
+        <form action="#" method="post">
+            <a href="community.html" class="btn btn-outline-secondary mb-4" style="font-weight: bold;">
+                <i class="bi bi-arrow-left"></i> Back
+            </a>
+            <h2 class="text-center mb-4" style="font-weight: bold;">Create Community</h2>
+
+            <div class="mb-3">
+                <label for="username" class="form-label"><b>Community name</b></label>
+                <input type="text" class="form-control" placeholder="Enter Community name" name="username" id="username" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="members" class="form-label"><b>Maximum members</b></label>
+                <input type="number" class="form-control" placeholder="Enter maximum members" id="members" name="quantity" min="1" required>
+            </div>
+
+            <div class="mb-3">
+                <label><b>Topic Category</b></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="story" name="category" value="story">
+                    <label class="form-check-label" for="story">Story</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="news" name="category" value="news">
+                    <label class="form-check-label" for="news">News</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="entertainment" name="category" value="entertainment">
+                    <label class="form-check-label" for="entertainment">Entertainment</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="games" name="category" value="games">
+                    <label class="form-check-label" for="games">Games</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="hobby" name="category" value="hobby">
+                    <label class="form-check-label" for="hobby">Hobby</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="health" name="category" value="health">
+                    <label class="form-check-label" for="health">Health</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="lifestyle" name="category" value="lifestyle">
+                    <label class="form-check-label" for="lifestyle">Lifestyle</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="sports" name="category" value="sports">
+                    <label class="form-check-label" for="sports">Sports</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="education" name="category" value="education">
+                    <label class="form-check-label" for="education">Education</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="food-travel" name="category" value="food-travel">
+                    <label class="form-check-label" for="food-travel">Food & Travel</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="economy-business" name="category" value="economy-business">
+                    <label class="form-check-label" for="economy-business">Economy & Business</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="tech" name="category" value="tech">
+                    <label class="form-check-label" for="tech">Tech</label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label"><b>Community Description</b></label>
+                <textarea id="message" name="message" class="form-control" rows="6" placeholder="Write description (optional)" required></textarea>
+            </div>
+
+            <div class="text-center">
+                <a href="community.html"><button type="submit" class="btn btn-primary" style="font-weight: bold;" onclick="myFunction1()">OK</button></a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function myFunction1() {
+            alert("Community created successfully.");
+        }
+    </script>
+</body>
+</html>

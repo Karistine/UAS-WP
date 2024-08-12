@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Forum and Community</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        main {
+            position: relative;
+        }
+        .btn-back {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #0000ff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .btn-back i {
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .btn-back {
+                padding: 8px 16px;
+                font-size: 0.9em;
+                left: 10px; /* Adjusted margin for smaller screens */
+                top: 10px; /* Adjusted margin for smaller screens */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .btn-back {
+                padding: 8px 16px;
+                font-size: 0.9em;
+                left: 5px; /* Further adjustment for very small screens */
+                top: 5px; /* Further adjustment for very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container-230060004">
+            <h1>ForumCommunity</h1>
+            <div class="search-container-230060004">
+                <form action="action_page.html">
+                    <input type="search" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="auth-buttons-230060004">
+                <a href="login.html"><button class="sign-in-230060004">Sign In</button></a>
+                <a href="register.html"><button class="sign-up-230060004">Sign Up</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="account.html" class="account-link-230060004">Account</a>
+        <div class="menu-container-230060004">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        
+        <section class="profile-section">
+            <button class="btn-back" onclick="window.history.back();"><i class="fa fa-arrow-left"></i> Back</button>
+            <h2>Community Profile</h2>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <img src="img/mentalhealth.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="profile-info">
+                        <h3>Mental Health</h3>
+                        <p>Welcome to our community! We are dedicated to bringing people together who share common interests and passions. Join discussions, share your ideas, and be a part of our vibrant community.</p>
+                        <p><strong>Members:</strong> 1,234</p>
+                        <p><strong>Joined:</strong> July 2024</p>
+                    </div>
+                </div>
+                <div class="profile-details">
+                    <h4>Community Description</h4>
+                    <p>
+                        Our community discusses topics about mental health. We host regular events, discussions, and activities that cater to diverse interests. 
+                        We also share useful information about mental health and how to manage and overcome it. Be sure to check out our latest discussions and participate in ongoing topics!</p>
+                </div>
+                <div class="profile-forum">
+                    <h4>Forum</h4>
+                    <a href="health1.html" class="see-here-button">See Here</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Copyright &copy; 2024 ForumCommunity. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
